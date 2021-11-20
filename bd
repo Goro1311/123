@@ -1,0 +1,10 @@
+import sqlite3
+
+conn = sqlite3.connect("My_cats")
+cursor = conn.cursor()
+
+cursor.execute("""CREATE TABLE types (
+    id   INTEGER PRIMARY KEY
+                 UNIQUE,
+    type VARCHAR NOT NULL)
+""")
